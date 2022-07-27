@@ -1,71 +1,85 @@
-//Í·ÎÄ¼ş 
-#include <string> 
-#include <iostream>
+//å¤´æ–‡ä»¶ 
+#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 //-------------------------------------------------------------------------
-//Ö÷º¯Êı 
+//ä¸»å‡½æ•° 
 int main() {
-	//Ä£Ê½Ñ¡Ôñ 
-	cout<<"ÇëÑ¡ÔñÒµÎñÀàĞÍ£º"<<endl<<"1.Éú³ÉSSH¿ªÆôÁ¬½Ó"<<"  "<<"2.Éú³ÉSSH¸ÄÃÜÂëÁ¬½Ó"<<"  "<<"3.Éú³É¹Ø±ÕSSHÁ¬½Ó";
-	int mode,network,stok;
-	cout<<endl<<"ÇëÊäÈë:";
-	cin>>mode;
-	if(mode=1)
-	{	//Ìõ¿î 
-		cout<<endl<<"ÄãºÃ£¬¿ªÆôSSH´ú±í×ÔÔ¸·ÅÆú±£ĞŞ£¬Èç¹ûÄã×ÔÔ¸·ÅÆú±£ĞŞ²¢Í¬ÒâÌõ¿îÇëÊäÈë1ºó°´Enter£¬·ñÔòÇë¹Ø±Õ´°¿Ú"
-	;	cout<<endl<<"¿ªÆôĞ¡Ã×Â·ÓÉÆ÷µÄSSH¹¦ÄÜÖ®ºóÓÃ»§¿ÉÒÔ»ñµÃrootÈ¨ÏŞ, rootÖ®ºóÓÃ»§µÄ¸÷ÖÖ²Ù×÷½«ÓĞ¿ÉÄÜ»áµ¼ÖÂÂ·ÓÉÆ÷ÏµÍ³²»ÎÈ¶¨»òÈíÓ²¼ş¹ÊÕÏ¡£¶ÔÓÚÓÃ»§Ö÷¶¯Ñ¡Ôñ¿ªÆôÉÏÊö¹¦ÄÜ¶ø¿ÉÄÜ²úÉúµÄºó¹û,Ğ¡Ã×¹«Ë¾½«²»»á³Ğµ£ÈÎºÎ·¨ÂÉÔğÈÎ(°üÀ¨µ«²»ÏŞÓÚÂ·ÓÉÆ÷ÖĞÊı¾İµÄÊ§¡¢ÈíÓ²¼şËğ»µ)¡£Í¬Ê±,ÓÃ»§¿ªÆô´Ë¹¦ÄÜ¼´´ú±íÖ÷¶¯·ÅÆúĞ¡Ã×¹«Ë¾Ìá¹©µÄ±£ĞŞ·şÎñ,ÇëÄúÔÚ¿ªÆô±¾¹¦ÄÜÖ®Ç°É÷ÖØ¿¼ÂÇ!"	
-	;
-		mode = 0;
-		cout<<endl;	
-		cin>>mode;
-		if(mode=1)
-		{//ÊäÈë²ÎÊı 
-			cout<<endl<<"ÇëÊäÈëÍø¶Î£º";
-			cin>>network;
-			cout<<endl<<"ÇëÊäÈëSTOK£º"; 
-			cin>>stok;
-			cout<<endl<<"Á´½ÓÊÇ£º"<<"http:// "<<network<<"/cgi-bin/luci/;stok="<<stok<<"/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20nvram%20set%20ssh_en%3D1%3B%20nvram%20commit%3B%20sed%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%5C%22debug%5C%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%3B%20%2Fetc%2Finit.d%2Fdropbear%20start%3B";
-		}
-	} 
-	if(mode=2)
-	{//²ÎÊı 
-		cout<<endl<<"ÇëÊäÈëÍø¶Î£º";
-		cin>>network;
-		cout<<endl<<"ÇëÊäÈëSTOK£º";
-		cin>>stok;
-		int d1,d2;//ÃÜÂëÑéÖ¤ 
-		cout<<endl<<"ÇëÊäÈëÃÜÂë"; 
-		cin>>d1;
-		cout<<"ÇëÔÙ´ÎÊäÈëÃÜÂë";
-		cin>>d2;
-		while(d1=!d2&&d1==0)
-		{
-			if(d1!=d2)
-			{
-				cout<<"Á½´ÎÊäÈë²»Ò»Ñù£¬ÇëÖØĞÂÊäÈë ";
-			}
-			else
-			cout<<" ÃÜÂë²»ÄÜÎª¿Õ";
-			d1 = 0;
-			d2 = 0;
-			cout<<endl<<"ÇëÊäÈëÃÜÂë" ;
-			cin>>d1;
-			cout<<"ÇëÔÙ´ÎÊäÈëÃÜÂë";
-			cin>>d2;
-		}
-		cout<<endl<<"Á´½ÓÊÇ£º"<<"http:// "<<network<<"/cgi-bin/luci/;stok="<<stok<<"/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20echo%20-e%20'"<<d1<<"%5Cn"<<d2<<"'%20%7C%20passwd%20root%3B";
-	}
-		if(mode=3)
-	{
-	//²ÎÊı
-		cout<<endl<<"ÇëÊäÈëÍø¶Î£º";
-		cin>>network;
-		cout<<endl<<"ÇëÊäÈëSTOK£º";
-		cin>>stok;
-		cout<<endl<<"Á´½ÓÊÇ£º"<<"http:// "<<network<<"/cgi-bin/luci/;stok="<<stok<<"/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20nvram%20set%20ssh_en%3D0%3B%20nvram%20commit%3B%20sed%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%5C%22debug%5C%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%3B%20%2Fetc%2Finit.d%2Fdropbear%20start%3B"
+	bool code1=1; 
+	while(code1)
+	{ //æ¨¡å¼é€‰æ‹© 
+		cout>>"æœ¬ç¨‹åºå…¨ç¨‹åœ¨æœ¬åœ°è¿è¡Œï¼Œå…¶ä»£ç å®Œå…¨å¼€æºå¯ä»¥å»https://github.com/cdpyx/Open-the-one-stop-service-of-Xiaomi-router-SSH-password-/æŸ¥çœ‹è°¢è°¢" 
 		;
-	}
+		code1 = 0;
+		cout<<"è¯·é€‰æ‹©ä¸šåŠ¡ç±»å‹ï¼š"<<endl<<"1.ç”ŸæˆSSHå¼€å¯è¿æ¥"<<"  "<<"2.ç”ŸæˆSSHæ”¹å¯†ç è¿æ¥"<<"  "<<"3.ç”Ÿæˆå…³é—­SSHè¿æ¥";
+		int mode;
+		string network,stok;
+		cout<<endl<<"è¯·è¾“å…¥:";
+		cin>>mode;
+		if(mode==1)
+		{	
 	
+			//æ¡æ¬¾ 
+			cout<<endl<<"ä½ å¥½ï¼Œå¼€å¯SSHä»£è¡¨è‡ªæ„¿æ”¾å¼ƒä¿ä¿®ï¼Œå¦‚æœä½ è‡ªæ„¿æ”¾å¼ƒä¿ä¿®å¹¶åŒæ„æ¡æ¬¾è¯·è¾“å…¥1åæŒ‰Enterï¼Œå¦åˆ™è¯·å…³é—­çª—å£"
+		;	cout<<endl<<"å¼€å¯å°ç±³è·¯ç”±å™¨çš„SSHåŠŸèƒ½ä¹‹åç”¨æˆ·å¯ä»¥è·å¾—rootæƒé™, rootä¹‹åç”¨æˆ·çš„å„ç§æ“ä½œå°†æœ‰å¯èƒ½ä¼šå¯¼è‡´è·¯ç”±å™¨ç³»ç»Ÿä¸ç¨³å®šæˆ–è½¯ç¡¬ä»¶æ•…éšœã€‚å¯¹äºç”¨æˆ·ä¸»åŠ¨é€‰æ‹©å¼€å¯ä¸Šè¿°åŠŸèƒ½è€Œå¯èƒ½äº§ç”Ÿçš„åæœ,å°ç±³å…¬å¸å°†ä¸ä¼šæ‰¿æ‹…ä»»ä½•æ³•å¾‹è´£ä»»(åŒ…æ‹¬ä½†ä¸é™äºè·¯ç”±å™¨ä¸­æ•°æ®çš„å¤±ã€è½¯ç¡¬ä»¶æŸå)ã€‚åŒæ—¶,ç”¨æˆ·å¼€å¯æ­¤åŠŸèƒ½å³ä»£è¡¨ä¸»åŠ¨æ”¾å¼ƒå°ç±³å…¬å¸æä¾›çš„ä¿ä¿®æœåŠ¡,è¯·æ‚¨åœ¨å¼€å¯æœ¬åŠŸèƒ½ä¹‹å‰æ…é‡è€ƒè™‘!"	
+		;
+			mode = 0;
+			cout<<endl;	
+			cin>>mode;
+			if(mode==1)
+			{//è¾“å…¥å‚æ•° 
+				cout<<endl<<"è¯·è¾“å…¥ç½‘æ®µï¼š";
+				cin>>network;
+				cout<<endl<<"è¯·è¾“å…¥STOKï¼š"; 
+				cin>>stok;
+				cout<<endl<<"é“¾æ¥æ˜¯ï¼š"<<"http:// "<<network<<"/cgi-bin/luci/;stok="<<stok<<"/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20nvram%20set%20ssh_en%3D1%3B%20nvram%20commit%3B%20sed%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%5C%22debug%5C%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%3B%20%2Fetc%2Finit.d%2Fdropbear%20start%3B";
+			}
+		} 
+		if(mode==2)
+		{//å‚æ•° 
+			cout<<endl<<"è¯·è¾“å…¥ç½‘æ®µï¼š";
+			cin>>network;
+			cout<<endl<<"è¯·è¾“å…¥STOKï¼š";
+			cin>>stok;
+			string d1,d2;//å¯†ç éªŒè¯ 
+			cout<<endl<<"è¯·è¾“å…¥å¯†ç "; 
+			cin>>d1;
+			cout<<"è¯·å†æ¬¡è¾“å…¥å¯†ç ";
+			cin>>d2;
+			while(d1!=d2||d1=="")
+			{
+				if(d1!=d2)
+				{
+					cout<<"ä¸¤æ¬¡è¾“å…¥ä¸ä¸€æ ·ï¼Œè¯·é‡æ–°è¾“å…¥ ";
+				}
+				else
+				cout<<" å¯†ç ä¸èƒ½ä¸ºç©º";
+				d1 = "";
+				d2 = "";
+				cout<<endl<<"è¯·è¾“å…¥å¯†ç " ;
+				cin>>d1;
+				cout<<"è¯·å†æ¬¡è¾“å…¥å¯†ç ";
+				cin>>d2;
+			}
+			cout<<endl<<"é“¾æ¥æ˜¯ï¼š"<<"http:// "<<network<<"/cgi-bin/luci/;stok="<<stok<<"/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20echo%20-e%20'"<<d1<<"%5Cn"<<d2<<"'%20%7C%20passwd%20root%3B";
+		}
+		if(mode==3)
+		{
+		//å‚æ•°
+			cout<<endl<<"è¯·è¾“å…¥ç½‘æ®µï¼š";
+			cin>>network;
+			cout<<endl<<"è¯·è¾“å…¥STOKï¼š";
+			cin>>stok;
+			cout<<endl<<"é“¾æ¥æ˜¯ï¼š"<<"http:// "<<network<<"/cgi-bin/luci/;stok="<<stok<<"/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20nvram%20set%20ssh_en%3D0%3B%20nvram%20commit%3B%20sed%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%5C%22debug%5C%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%3B%20%2Fetc%2Finit.d%2Fdropbear%20start%3B"
+			;
+			system("cls");
+			cout<<"ç»§ç»­ä½¿ç”¨æœ¬ç¨‹åºå—ï¼Ÿ"<<endl<<"1.è¦ 2.ä¸è¦";
+			cin>>code1;
+			code1 = 1;
+			system("cls");
+			 
+		}
+	}
 	return 0;
 }
 
