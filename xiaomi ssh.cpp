@@ -1,34 +1,28 @@
-
-//头文件 Header File
+//头文件 
 #include <string>
 #include <bits/stdc++.h>
 using namespace std;
 //-------------------------------------------------------------------------
-//主函数 Principal function
+//主函数 
 int main() {
 	bool code1=1; 
 	while(code1)
-	{ //模式选择 Mode Selection
-		cout>>"本程序全程在本地运行，其代码完全开源可以去https://github.com/cdpyx/Open-the-one-stop-service-of-Xiaomi-router-SSH-password-/查看谢谢" <<endl<<"This program runs locally and its code is completely open source https://github.com/cdpyx/Open-the-one-stop-service-of-Xiaomi-router-SSH-password-/ Check it out, thank you!";
+	{ //模式选择 
+		cout>>"本程序全程在本地运行，其代码完全开源可以去https://github.com/cdpyx/Open-the-one-stop-service-of-Xiaomi-router-SSH-password-/查看谢谢" 
+		;
 		code1 = 0;
-		cout<<"请选择业务类型 Please select a business type："<<endl<<"1.生成SSH开启连接"<<"  "<<"2.生成SSH改密码连接"<<"  "<<"3.生成关闭SSH连接"<<endl<<"1. Generate SSH to open connection 2. Generate SSH password change connection 3. Generate Close SSH Connections";
+		cout<<"请选择业务类型："<<endl<<"1.生成SSH开启连接"<<"  "<<"2.生成SSH改密码连接"<<"  "<<"3.生成关闭SSH连接";
 		int mode;
 		string network,stok;
-		cout<<endl<<"请输入 Please enter:";
+		cout<<endl<<"请输入:";
 		cin>>mode;
-		if(mode!=(1||2||3))
-		{
-			cout<<"功能选择错误 Function selection error";
-		
-		}
 		if(mode==1)
 		{	
 	
-			//条款 clause
-
-			cout<<endl<<"你好，开启SSH代表自愿放弃保修，如果你自愿放弃保修并同意条款请输入1后按Enter，否则请直接回车"<<endl<<"Hello, opening SSH means voluntary abandonment of warranty. If you voluntarily abandon warranty and agree to the terms, please enter 1 and press Enter, otherwise please return directly";	
-			cout<<endl<<"开启小米路由器的SSH功能之后用户可以获得root权限, root之后用户的各种操作将有可能会导致路由器系统不稳定或软硬件故障。对于用户主动选择开启上述功能而可能产生的后果,小米公司将不会承担任何法律责任(包括但不限于路由器中数据的失、软硬件损坏)。同时,用户开启此功能即代表主动放弃小米公司提供的保修服务,请您在开启本功能之前慎重考虑!<<endl<<"After turning on the SSH function of the millet router, the user can get root privilege. After root, various operations of the user may cause the router system instability or hardware and software failure. Millet will not be legally liable for any consequences (including, but not limited to, loss of data in the router, software and hardware damage) that may result from the user's active choice to turn on the above functions. At the same time, users turning on this feature means voluntarily discarding the warranty service provided by millet company, please consider carefully before turning on this feature!(来自miweifi.com From miweifi.com)";
-			system("cls")
+			//条款 
+			cout<<endl<<"你好，开启SSH代表自愿放弃保修，如果你自愿放弃保修并同意条款请输入1后按Enter，否则请关闭窗口"
+		;	cout<<endl<<"开启小米路由器的SSH功能之后用户可以获得root权限, root之后用户的各种操作将有可能会导致路由器系统不稳定或软硬件故障。对于用户主动选择开启上述功能而可能产生的后果,小米公司将不会承担任何法律责任(包括但不限于路由器中数据的失、软硬件损坏)。同时,用户开启此功能即代表主动放弃小米公司提供的保修服务,请您在开启本功能之前慎重考虑!"	
+		;
 			mode = 0;
 			cout<<endl;	
 			cin>>mode;
@@ -88,4 +82,3 @@ int main() {
 	}
 	return 0;
 }
-
