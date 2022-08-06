@@ -11,7 +11,7 @@ int main() {q
 		cout>>"本程序全程在本地运行，其代码完全开源可以去https://github.com/cdpyx/Open-the-one-stop-service-of-Xiaomi-router-SSH-password-/查看谢谢" 
 		;
 		code1 = 0;
-		cout<<"请选择业务类型："<<endl<<"1.生成SSH开启连接"<<"  "<<"2.生成SSH改密码连接"<<"  "<<"3.生成关闭SSH连接";
+		cout<<"请选择业务类型："<<endl<<"1.生成SSH开启连接"<<"  "<<"2.生成SSH改密码连接"<<"1  "<<"3.生成关闭SSH连接";
 		int mode;
 		string network,stok;
 		cout<<endl<<"请输入:";
